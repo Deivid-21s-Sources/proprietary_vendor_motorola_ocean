@@ -12,8 +12,7 @@ android_app_import {
 	name: "MotorolaSettingsProvider",
 	owner: "motorola",
 	apk: "proprietary/product/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
-	preprocessed: true,
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
