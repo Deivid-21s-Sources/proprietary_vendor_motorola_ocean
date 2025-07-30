@@ -20,10 +20,20 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/ocean/proprietary/vendor/etc/acdbdata/na/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/na/Hdmi_cal.acdb \
     vendor/motorola/ocean/proprietary/vendor/etc/acdbdata/na/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/na/Headset_cal.acdb \
     vendor/motorola/ocean/proprietary/vendor/etc/acdbdata/na/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/na/Speaker_cal.acdb \
+    vendor/motorola/ocean/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
+    vendor/motorola/ocean/proprietary/vendor/etc/camera/ov12a10_ocean_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov12a10_ocean_chromatix.xml \
+    vendor/motorola/ocean/proprietary/vendor/etc/camera/s5k4h7_ocean_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7_ocean_chromatix.xml \
     vendor/motorola/ocean/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ocean.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ocean.rc \
+    vendor/motorola/ocean/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    vendor/motorola/ocean/proprietary/vendor/etc/libnfc-nci-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci-st.conf \
     vendor/motorola/ocean/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_csot_720p_622.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_csot_720p_622.xml \
     vendor/motorola/ocean/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_ofilm_720p_622.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_ofilm_720p_622.xml \
     vendor/motorola/ocean/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_720p_622.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_tianma_720p_622.xml \
+    vendor/motorola/ocean/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    vendor/motorola/ocean/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
+    vendor/motorola/ocean/proprietary/vendor/etc/thermal-engine-ocean-NA.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-ocean-NA.conf \
+    vendor/motorola/ocean/proprietary/vendor/etc/thermal-engine-ocean.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-ocean.conf \
+    vendor/motorola/ocean/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/motorola/ocean/proprietary/vendor/firmware/AbovCapSense.BIN:$(TARGET_COPY_OUT_VENDOR)/firmware/AbovCapSense.BIN \
     vendor/motorola/ocean/proprietary/vendor/firmware/FT8006U_Pramboot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FT8006U_Pramboot.bin \
     vendor/motorola/ocean/proprietary/vendor/firmware/cpp_firmware_v1_10_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_10_0.fw \
@@ -43,9 +53,22 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/ocean/proprietary/vendor/firmware/leia_pm4_470.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/leia_pm4_470.fw \
     vendor/motorola/ocean/proprietary/vendor/firmware/novatek_ts-csot-NT36672A-180919-07-ocean.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts-csot-NT36672A-180919-07-ocean.bin \
     vendor/motorola/ocean/proprietary/vendor/firmware/st21nfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw.bin \
-    vendor/motorola/ocean/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt
+    vendor/motorola/ocean/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
+    vendor/motorola/ocean/proprietary/vendor/usr/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
+    vendor/motorola/ocean/proprietary/vendor/usr/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
 
 PRODUCT_PACKAGES += \
+    libmmcamera_faceproc_system \
+    libmmcamera_faceproc2_system \
+    libmmcamera2_frame_algorithm \
+    libmmcamera2_is \
+    libmmcamera2_stats_algorithm \
+    libmmcamera2_stats_lib \
+    libmmcamera_dbg \
+    libmmcamera_faceproc \
+    libmmcamera_faceproc2 \
+    libmmcamera_tintless_algo \
+    libmmcamera_tintless_bg_pca_algo \
     sensors.ssc \
     audio.primary.msm8953-moto \
     camera.msm8953 \
@@ -142,6 +165,20 @@ PRODUCT_PACKAGES += \
     libchromatix_ov12a10_ocean_snapshot \
     libchromatix_ov12a10_ocean_zsl_preview_3a \
     libchromatix_ov12a10_ocean_zsl_video_3a \
+    libchromatix_s5k4h7_channel_common \
+    libchromatix_s5k4h7_channel_cpp_hfr_120 \
+    libchromatix_s5k4h7_channel_cpp_liveshot \
+    libchromatix_s5k4h7_channel_cpp_preview \
+    libchromatix_s5k4h7_channel_cpp_snapshot \
+    libchromatix_s5k4h7_channel_cpp_snapshot_custom \
+    libchromatix_s5k4h7_channel_cpp_video_full \
+    libchromatix_s5k4h7_channel_hfr_120 \
+    libchromatix_s5k4h7_channel_hfr_120_3a \
+    libchromatix_s5k4h7_channel_postproc \
+    libchromatix_s5k4h7_channel_snapshot \
+    libchromatix_s5k4h7_channel_video_full \
+    libchromatix_s5k4h7_channel_zsl_preview_3a \
+    libchromatix_s5k4h7_channel_zsl_video_3a \
     libchromatix_s5k4h7_ocean_common \
     libchromatix_s5k4h7_ocean_cpp_hfr_120 \
     libchromatix_s5k4h7_ocean_cpp_liveshot \
@@ -166,10 +203,8 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     libmmcamera2_c2d_module \
     libmmcamera2_cpp_module \
-    libmmcamera2_frame_algorithm \
     libmmcamera2_iface_modules \
     libmmcamera2_imglib_modules \
-    libmmcamera2_is \
     libmmcamera2_isp_modules \
     libmmcamera2_mct \
     libmmcamera2_mct_shimlayer \
@@ -177,17 +212,12 @@ PRODUCT_PACKAGES += \
     libmmcamera2_pproc_modules \
     libmmcamera2_q3a_core \
     libmmcamera2_sensor_modules \
-    libmmcamera2_stats_algorithm \
-    libmmcamera2_stats_lib \
     libmmcamera2_stats_modules \
-    libmmcamera_dbg \
     libmmcamera_depth_map \
     libmmcamera_eebinparse \
     libmmcamera_eeprom_util \
     libmmcamera_eztune_module \
     libmmcamera_facedetection_lib \
-    libmmcamera_faceproc \
-    libmmcamera_faceproc2 \
     libmmcamera_hdr_gb_lib \
     libmmcamera_imglib \
     libmmcamera_imglib_faceproc_adspstub \
@@ -246,8 +276,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_stillmore_lib \
     libmmcamera_sw2d_lib \
     libmmcamera_thread_services \
-    libmmcamera_tintless_algo \
-    libmmcamera_tintless_bg_pca_algo \
     libmmcamera_tuning \
     libmmcamera_tuning_lookup \
     libmmcamera_vstab_module \
@@ -273,6 +301,5 @@ PRODUCT_PACKAGES += \
     libmmieffectswrapper \
     libspeakerbundle \
     com.fingerprints.extension@1.0 \
-    MotCamera2 \
     charge_only_mode \
     android.hardware.biometrics.fingerprint@2.1-fpcservice
